@@ -1,0 +1,165 @@
+/* Estilo geral do corpo */
+html {
+    scroll-behavior: smooth; /* Scroll suave */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #14b94ba6;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Estilo da navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo do conteúdo principal */
+main {
+    flex: 1;
+    padding-top: 60px; /* Adiciona espaçamento para o cabeçalho fixo */
+}
+
+/* Estilo das seções */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px; /* Bordas mais arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 0 20px #14b94ba6, 0 0 10px #14b94ba6;
+    transform: translateY(-5px); /* Elevar um pouco a seção */
+}
+
+/* Estilo dos títulos */
+h2 {
+    color: #57caff;
+}
+
+/* Estilo dos formulários */
+form {
+    border-radius: 20px; /* Bordas mais arredondadas */
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select, form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordas mais arredondadas */
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #14b94ba6;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:active {
+    background-color: #ff0000;
+    transform: scale(0.95);
+}
+
+/* Estilo do carrossel */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 110px;
+}
+
+.carousel-item {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 70%;
+    height: 500px; /* Reduz a altura para evitar cortes */
+    object-fit: contain; /* Ajusta a imagem para caber dentro do espaço sem cortar */
+    border-radius: 10px;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #14b94ba6;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Estilo da notificação */
+.notification {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #14b94ba6;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.notification button {
+    background-color: white;
+    color: #14b94ba6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notification button:hover {
+    background-color: #fc3e3e;
+}

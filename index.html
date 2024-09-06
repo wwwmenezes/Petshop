@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mundo Animal</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#cadastro-cliente">Cadastro Cliente</a></li>
+                <li><a href="#cadastro-pet">Cadastro Pet</a></li>
+                <li><a href="#agendamento">Agendamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <img src="images/Ração seca.jpg" alt="Produto 1">
+                    <p>Ração Seca - R$35,00</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Ração úmida.webp" alt="Produto 2">
+                    <p>Ração Úmida - R$50,00</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <img src="images/Banho.jpg" alt="Serviço 1">
+                    <p>Banho - R$40,00</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Tosa.jpg" alt="Serviço 2">
+                    <p>Tosa - R$60,00</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cadastro-cliente">
+            <h2>Cadastro de Cliente</h2>
+            <form id="form-cliente" onsubmit="event.preventDefault(); showNotification();">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section id="cadastro-pet">
+            <h2>Cadastro de Pet</h2>
+            <form id="form-pet" onsubmit="event.preventDefault(); showNotification();">
+                <label for="nome-pet">Nome do Pet:</label>
+                <input type="text" id="nome-pet" name="nome-pet" required>
+                
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="cao">Cão</option>
+                    <option value="gato">Gato</option>
+                </select>
+                
+                <label for="raca">Raça:</label>
+                <input type="text" id="raca" name="raca" required>
+                
+                <label for="temperamento">Temperamento:</label>
+                <input type="text" id="temperamento" name="temperamento">
+                
+                <button type="submit">Cadastrar Pet</button>
+            </form>
+        </section>
+
+        <section id="agendamento">
+            <h2>Agendamento de Serviços</h2>
+            <form id="form-agendamento" onsubmit="event.preventDefault(); showNotification();">
+                <label for="servico">Serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="banho">Banho</option>
+                    <option value="tosa">Tosa</option>
+                </select>
+                
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+                
+                <label for="busca-pet">Busca Pet:</label>
+                <div class="btn-3-container">
+                    <input type="checkbox" id="busca-pet" name="busca-pet" class="btn-3-checkbox">
+                    <label for="busca-pet" class="btn-3">Sim</label>
+                </div>
+                
+                <button type="submit">Agendar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 PetShop Online. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Contêiner para a notificação -->
+    <div id="notification" class="notification">
+        <p>Formulário enviado com sucesso!</p>
+        <button onclick="closeNotification()">OK</button>
+    </div>
+
+    <script>
+        function showNotification() {
+            document.getElementById('notification').style.display = 'flex';
+        }
+
+        function closeNotification() {
+            document.getElementById('notification').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
